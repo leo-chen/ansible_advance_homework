@@ -35,7 +35,7 @@
     # Fix the existing shell scripts to reference jq command with bin/jq
     # fixed
     - name: fix scripts
-      shell: "sed -i 's/ jq/ bin\/jq/g' {{ item }}"
+      shell: "sed -i 's/ jq/ bin\\/jq/g' {{ item }}"
       with_items:
         - /root/common.sh
         - /root/order_svc.sh
