@@ -1,5 +1,9 @@
 ---
-instance_name: app2
-group: apps
-deployment: dev
-security_group_name: app_servers
+name: app2
+state: present
+image: rhel-guest
+key_name: ansible_ssh
+flavor: m2.small
+security_group: apps
+meta:
+  - { group: apps, deployment_name: QA}

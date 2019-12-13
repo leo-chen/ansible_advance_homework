@@ -1,6 +1,9 @@
 ---
-instance_name: frontend
-group: frontends
-deployment: dev
-security_group_name: frontend_servers 
-
+name: frontend
+state: present
+image: rhel-guest
+key_name: ansible_ssh
+flavor: m2.small
+security_group: frontend
+meta:
+  - { group: frontends, deployment_name: QA}
