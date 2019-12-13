@@ -1,0 +1,12 @@
+---
+
+# tasks file for osp.servers
+- name: Create new server instances and attaches them a network and passes metadata to the instance
+  debug:
+    var: "{{ item }}"
+  with_items: "{{osp_servers.frontends}}"
+
+- name: Add floating IP to Servers
+   
+
+- name: Wait for server to be available
