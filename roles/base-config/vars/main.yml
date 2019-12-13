@@ -1,2 +1,1 @@
----
-# vars file for base-config
+own_repo_path: "http://admin.na.shared.opentlc.com/repos/ocp/3.6"
