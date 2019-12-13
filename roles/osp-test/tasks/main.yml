@@ -6,7 +6,7 @@
     var: "{{ item }}"
   with_items: "{{osp_servers.frontends}}"
 
-- name: Add floating IP to Servers
+#- name: Add floating IP to Servers
    
 
-- name: Wait for server to be available
+#- name: Wait for server to be available
