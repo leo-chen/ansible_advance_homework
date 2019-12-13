@@ -1,4 +1,21 @@
+#- name: Generate tower_cli.cfg file
+#  template:
+#    src: tower_cli.j2
+#    dest: /tmp/tower_cli.cfg
+
 - name: Create Homework Assignment project 
+  tower_project:
+    name: "{{ proj_name }}"
+    description: "{{ proj_name }} project"
+    organization: "{{ org_name }}"
+    state: present
+#    tower_config_file: "/tmp/tower_cli.cfg"
+    tower_host: tower1.{{tower_GUID}}.example.opentlc.com
+    tower_username: admin
+    tower_password: r3dh4t1!
+    scm_type: "git"
+    scm_url: "{{ scm_url }}"
+
 # Use tower module or tower-cli to create Ansible Tower project. Name of the project is specifed in ./vars/main.yml
 
 - name: Machine Credentail to connect to workstation using openstack.pub
